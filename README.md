@@ -1,4 +1,8 @@
-﻿**Nome MOD:** XirCookie Enhance Mod  
+﻿# XirCookie Enhance Mod - Phpbb Mod for 3.0.x
+### Modifica per l'accettazione dei cookie per phpbb 3.0.x. [Xiradorn Lab] [xlab] - Sir Xiradorn  
+[xlab]: http://xiradorn.it "Xiradorn Lab"
+----
+**Nome MOD:** XirCookie Enhance Mod  
 **Autore**: Sir Xiradorn  
 **Versione Mod**: 0.30.10 - Beta  
 **Data**: 04/07/2015  
@@ -47,7 +51,9 @@
   * Up - Traduzione stringe restanti
   * Dev - Creazione della Custom Page che ripete la stessa pagina di benvenuto che trovate grazie a tale mod. Le modifiche che fate in quella, le avrete contemporaneamente in questa e allo stesso modo. Questo vale anche per le traduzioni nei file di lingua della mod in questione.
  
- * 21/06/2015 - Fix - Alcuni fix per le modalità di Debug / Debug Extra che ora non danno più segno di squilibrio :mrgreen:
+ * 21/06/2015 - Fix - Alcuni fix per le modalità di Debug / Debug Extra che ora non danno più segno di squilibrio ![altimg][img]
+[altimg]: ":mrgreen:"
+[img]: data:image/gif;base64,R0lGODlhDwARAOZEAAAAAP///zpANwDkfgCKTAC8aACyYgB8RQB+RQDIbgCoXQDSdEZOROnq6QCcVe7u7gCOTtXW1UxXSQDaeADqgVViUgDug/b29kZQQgDOcVtkWFNbUZaZlQDifACCSIWMhHyCegDceUJKQADyhW92bQC+aVJdT01WSwDGbWtyabW4tSlyRlODaQCGSgCgWQDKb5OwogCmWwDsggDEbQDWdgDYd4CFfgGBR2l+Zf3+/gDgewC0YwCWUwCaVQB4QkuPZ11oWomPiFF7YwCqXv///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAEQALAAAAAAPABEAQAe9gESCF0FAJhUmGh8XgkQMHgABAZGSlAAJAo2CKkIaKTA5mh8QDgoAADMZNacWIwM2RCQICKeSkwAxCiSCHDgKBgUJCxMDFBYSHEQSBDwuQzsFKBk0IToDISIgB5a2liUggg0CBwceBAQQEAINmhEVwMLEFBsRgg8MpfDDxa0CDyekAAAD8AJAhw4AZAwQUaHFqYcQTy3AwGBbpW6VSjCIIIHWJIwCMdR7IMAHLYg9HPjT1GDDihvnfrBgJygQADs=
  
  * 24/06/2015 - 
   * Fix - Importante fix sul sid e su un errore di cron.
