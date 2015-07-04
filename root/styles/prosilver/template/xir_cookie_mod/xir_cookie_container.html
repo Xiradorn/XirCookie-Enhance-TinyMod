@@ -1,0 +1,128 @@
+<div class="x_container">
+	<div class="col3d4">
+		<div class="panel xpan cornsilk">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content">
+				<h4 class="capitalize_xif">Xi AutoLang Detector</h4>
+				<!--p>Fate Attenzione. Alcune aree sono solo presenti su desktop e scopaiono su mobile (visualizzazione fissata a 640px).
+				<script type="text/javascript">
+					var xir_windown_width = $(window).width(); 
+
+					if (xir_windown_width > 640) {
+						document.write('Il vostro browser misura: ' + xir_windown_width + 'px.</p>');
+					} 
+					else {
+						document.write('Il vostro browser misura: <span style="color:red">' + xir_windown_width + 'px.</span></p>');
+					}
+
+					$(window).bind();
+				</script>
+				<noscript>
+					</p>
+				</noscript-->
+				<p>{X_AUTO_LANG_STRING}</p>
+			<!--/p-->
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content justify_xif">
+				<h2>{SITENAME} - Cookie Policy</h2>
+				<img data-src="holder.js/100px80?bg=115098&amp;fg=ffffff&amp;text={L_X_IMMAGINE}&amp;size=8" style="margin: 10px auto; border-radius: 5px">
+				{L_X_COOKIE_MSG}
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan powderblue">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content center_xif">
+				<h4>{SITENAME} - Xi Translate Bar</h4>
+				{X_AUTO_LANG_FLAG_BIG}
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan palegreen xir_desktop">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content justify_xif">
+				<h4>{L_X_DESKTOP_ONLY}</h4>
+				<label class="xir_msg_ext_expander_label">{L_X_COOKIE_MSG_EXT_BTN}</label><input type="checkbox" value="expand_check" class="xir_msg_ext_expander" />
+				{L_X_COOKIE_MSG_EXT}
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan plum xir_mobile">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content justify_xif">
+				<h4>{L_X_MOBILE_ONLY}</h4>
+				{L_X_COOKIE_MSG_EXT}
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+	</div>
+	<div class="col1d4">
+		<div class="panel xpan">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content center_xif">
+				<h4>{L_X_MENU_LATERALE}</h4>
+				<p>
+					{XIF_USER_AVATAR}<br />
+					{XIF_USER_NAME}<br />
+					{XIF_USER_RANK}
+					<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+					<br />
+					<a class="icon-ucp" href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">{L_PROFILE}</a><br />
+					<!-- IF S_DISPLAY_PM --> <a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a><!-- ENDIF -->
+					<!-- ENDIF -->
+				</p>
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan palegreen xir_desktop xif_admin_staff_list">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content center_xif">
+				<h4>{L_X_DESKTOP_ONLY}</h4>
+				<h6 class="no-border_xif">&raquo; {L_XF_FOUNDER_LIST} &laquo;</h6>
+				<p>
+					<!-- BEGIN xif_founder_staff_list -->
+					{xif_founder_staff_list.XIF_ADMIN_AVATAR} {xif_founder_staff_list.XIF_ADMIN_PROFILE}<br />
+					<!-- END xif_founder_staff_list -->
+				</p>
+				<h6 class="no-border_xif">&raquo; {L_XF_ADMIN_LIST} &laquo;</h6>
+				<p>
+					<!-- BEGIN xif_admin_staff_list -->
+					{xif_admin_staff_list.XIF_ADMIN_AVATAR} {xif_admin_staff_list.XIF_ADMIN_PROFILE}<br />
+					<!-- END xif_admin_staff_list -->
+				</p>
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan lightyellow">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content center_xif">
+				<h4>{L_X_MENU_LATERALE_ALTERNATIVO}</h4>
+				{L_X_EURLEX_WIDGET}
+			</div>
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+		<div class="panel xpan plum xir_mobile">
+			<div class="inner"><span class="corners-top"><span></span></span>
+			<div class="content center_xif">
+				<h4>{L_X_DESKTOP_ONLY}</h4>
+				<h6 class="no-border_xif">&raquo; {L_XF_FOUNDER_LIST} &laquo;</h6>
+				<p>
+					<!-- BEGIN xif_founder_staff_list -->
+					{xif_founder_staff_list.XIF_ADMIN_AVATAR} {xif_founder_staff_list.XIF_ADMIN_PROFILE}<br />
+					<!-- END xif_founder_staff_list -->
+				</p>
+				<h6 class="no-border_xif">&raquo; {L_XF_ADMIN_LIST} &laquo;</h6>
+				<p>
+					<!-- BEGIN xif_admin_staff_list -->
+					{xif_admin_staff_list.XIF_ADMIN_AVATAR} {xif_admin_staff_list.XIF_ADMIN_PROFILE}<br />
+					<!-- END xif_admin_staff_list -->
+				</p>
+			<span class="corners-bottom"><span></span></span></div>
+			</div>
+		</div>
+	</div>
+</div>

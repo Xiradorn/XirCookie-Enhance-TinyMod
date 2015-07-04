@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--NOTICE: Please open this file in your web browser. If presented with a security warning, you may safely tell it to allow the blocked content.-->
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD.\nAlthough MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD.\nNo support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.phpbb.com/mods/xml/modx-1.2.6.xsd">
+	<header>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (online version)"/>
+		<meta name="generator" content="MODX file generated with PP MODX Creator 1.2.6 by tumba25 (phpBB version)"/>
+		<meta name="generator" content="MODX file generated with PP MODX Creator by tumba25 (offline version)"/>
+		<meta name="generator" content="MODX file generated with PP MODX Creator 1.0.1 by tumba25 (offline version)"/>
+		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
+		<title lang="en"><![CDATA[XirCookie Enhance TinyMod]]></title>
+		<description lang="en"><![CDATA[We give our forum by law creating a pre-portal hosting for users with all the information you need. The cookies are proof device and does not require JavaScript so even on older browsers can be displayed throughout. It also provides some additional functions and auto translated into many different languages.
+
+For validate your cookie policy you mast edit the language file for add your personal text to the string for customize the content and validate it (for the European law).
+The file is here: 
+- root/language/LANG/xir_cookie_mod.php
+
+If you wont enable/disable language can comment the line in this file:
+- root/includes/xir_cookie_mod/xir_cookie_allowed_lang.php
+
+Tiny Version - Minified code]]></description>
+		<author-notes lang="en"><![CDATA[This mod not use js but ib build entirely php with the help of css for the animations. The copyright is vital ad add the copyright string to all footer and all style installed or the forum will not work.]]></author-notes>
+		<author-group>
+			<author>
+				<realname><![CDATA[Tony Frost]]></realname>
+				<username><![CDATA[Sir Xiradorn]]></username>
+				<homepage><![CDATA[http://xiradorn.it]]></homepage>
+			</author>
+		</author-group>
+		<mod-version>0.30.10</mod-version>
+		<installation>
+			<level>intermediate</level>
+			<time>1200</time>
+			<target-version>3.0.14</target-version>
+		</installation>
+		<link-group>
+			<link type="text" href="ChangeLog.html" lang="en">ChangeLog HTML [it]</link>
+			<link type="text" href="ChangeLog.txt" lang="en">ChangeLog TXT [it]</link>
+		</link-group>
+	</header>
+	<action-group>
+		<copy>
+			<file from="root/docs/*.*" to="docs/*.*"/>
+			<file from="root/images/*.*" to="images/*.*"/>
+			<file from="root/language/*.*" to="language/*.*"/>
+			<file from="root/style/*.*" to="style/*.*"/>
+			<file from="root/xir_cookie.php" to="xir_cookie.php"/>
+		</copy>
+		<open src="includes/functions.php">
+			<edit>
+				<find><![CDATA[	// The following assigns all _common_ variables that may be used at any point in a template.]]></find>
+				<action type="before-add"><![CDATA[	/* Sir Xiradorn - XirCookie Enhance Mod */
+	include("xir_cookie_mod/xir_cookie_mod.$phpEx");
+	/* Sir Xiradorn - XirCookie Enhance Mod */
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA['A_COOKIE_SETTINGS'		=> addslashes('; path=' . $config['cookie_path'] . ((!$config['cookie_domain'] || $config['cookie_domain'] == 'localhost' || $config['cookie_domain'] == '127.0.0.1') ? '' : '; domain=' . $config['cookie_domain']) . ((!$config['cookie_secure']) ? '' : '; secure')),
+	));
+]]></find>
+				<action type="after-add"><![CDATA[	/* Sir Xiradorn - XirCookie Enhance Mod */
+	include("xir_cookie_mod/xir_cookie_template_array.$phpEx");
+	/* Sir Xiradorn - XirCookie Enhance Mod */
+]]></action>
+			</edit>
+		</open>
+		<open src="includes/session.php">
+			<edit>
+				<find><![CDATA[		$this->page					= $this->extract_current_page($phpbb_root_path);
+]]></find>
+				<action type="after-add"><![CDATA[		// Sir Xiradorn - XirCookie Enhance Mod
+		$xir_cookie = isset($_COOKIE['xir_cookie_choise']) ? $_COOKIE['xir_cookie_choise'] : null;
+
+		if (!isset($xir_cookie) and $this->page['page_name'] != "index.$phpEx") {
+			redirect("{$phpbb_root_path}index.$phpEx");
+		}
+		// Sir Xiradorn - XirCookie Enhance Mod
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		header('Set-Cookie: ' . $name_data . (($cookietime) ? '; expires=' . $expire : '') . '; path=' . $config['cookie_path'] . $domain . ((!$config['cookie_secure']) ? '' : '; secure') . '; HttpOnly', false);]]></find>
+				<action type="replace-with"><![CDATA[		//header('Set-Cookie: ' . $name_data . (($cookietime) ? '; expires=' . $expire : '') . '; path=' . $config['cookie_path'] . $domain . ((!$config['cookie_secure']) ? '' : '; secure') . '; HttpOnly', false);
+		// Sir Xiradorn - XirCookie Enhance Mod
+		$xir_cookie = isset($_COOKIE['xir_cookie_choise']) ? $_COOKIE['xir_cookie_choise'] : null;
+		if (isset($xir_cookie)) {
+			header('Set-Cookie: ' . $name_data . (($cookietime) ? '; expires=' . $expire : '') . '; path=' . $config['cookie_path'] . $domain . ((!$config['cookie_secure']) ? '' : '; secure') . '; HttpOnly', false);
+		}
+		// Sir Xiradorn - XirCookie Enhance Mod]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/index_body.html">
+			<edit>
+				<find><![CDATA[<!-- INCLUDE overall_header.html -->]]></find>
+				<action type="after-add"><![CDATA[<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<!-- IF NEWEST_USER -->
+	<h3>{L_STATISTICS}</h3>
+	<p>{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}</p>
+<!-- ENDIF -->
+]]></find>
+				<action type="after-add"><![CDATA[<!-- ELSE -->
+	<!-- INCLUDE xir_cookie_mod/xir_cookie_index_body.html -->
+<!-- ENDIF -->
+<!-- INCLUDE overall_footer.html -->]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/overall_footer.html">
+			<edit>
+				<find><![CDATA[<div id="page-footer">]]></find>
+				<action type="after-add"><![CDATA[	<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			<li class="rightside"><!-- IF U_TEAM --><a href="{U_TEAM}">{L_THE_TEAM}</a> &bull; <!-- ENDIF --><!-- IF not S_IS_BOT --><a href="{U_DELETE_COOKIES}">{L_DELETE_COOKIES}</a> &bull; <!-- ENDIF -->{S_TIMEZONE}</li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>]]></find>
+				<action type="after-add"><![CDATA[	<!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->]]></find>
+				<action type="before-add"><![CDATA[		<!-- IF S_XIR_COOKIE_MOD --><br />{L_XIR_COOKIE_COPY}<!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/overall_header.html">
+			<edit>
+				<find><![CDATA[<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}" />]]></find>
+				<action type="after-add"><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1" />]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '{A_COOKIE_SETTINGS}';]]></find>
+				<action type="replace-with"><![CDATA[	<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT -->
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '{A_COOKIE_SETTINGS}';
+	<!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>]]></find>
+				<action type="replace-with"><![CDATA[<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT -->
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
+<script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
+<!-- ENDIF -->
+<script src="{T_SUPER_TEMPLATE_PATH}/holder.min.js"></script>]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[</head>]]></find>
+				<action type="before-add"><![CDATA[<script src="{T_SUPER_TEMPLATE_PATH}/jquery-1.11.3.min.js"></script>
+<script src="{T_SUPER_TEMPLATE_PATH}/jquery-migrate-1.2.1.min.js"></script>
+<!--[if lt IE 9]><script src="{T_SUPER_TEMPLATE_PATH}/html5.min.js"></script><![endif]-->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<a href="{U_XIR_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>]]></find>
+				<inline-edit>
+					<inline-action type="replace-with"><![CDATA[<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT --><a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a><!-- ELSE --><a href="{U_XIR_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a><!-- ENDIF -->]]></inline-action>
+				</inline-edit>
+			</edit>
+			<edit>
+				<find><![CDATA[			<div id="search-box">]]></find>
+				<action type="before-add"><![CDATA[			<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH and S_XIR_COOKIE_CHECK -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					<input class="button2" value="{L_SEARCH}" type="submit" /><br />
+					<a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}">{L_SEARCH_ADV}</a> {S_SEARCH_HIDDEN_FIELDS}
+				</fieldset>
+				</form>
+			</div>]]></find>
+				<action type="after-add"><![CDATA[			<!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>]]></find>
+				<action type="before-add"><![CDATA[		<!-- IF S_XIR_COOKIE_CHECK or S_IS_BOT -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			<ul class="linklist rightside">]]></find>
+				<action type="after-add"><![CDATA[				<!-- IF S_XIR_COOKIE_MOD --><li class="icon-ucp"><a href="{U_XIR_COOKIE_PAGE}" title="{L_XIR_COOKIE_PAGE}" accesskey="x">{L_XIR_COOKIE_PAGE}</a></li><!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					<li class="icon-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">{L_LOGIN_LOGOUT}</a></li>
+				<!-- ENDIF -->
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>]]></find>
+				<action type="after-add"><![CDATA[		<!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/theme/stylesheets.css">
+			<edit>
+				<find><![CDATA[@import url("colours.css");]]></find>
+				<action type="after-add"><![CDATA[/* XirCookie Enhance Mod */
+@import url("xir_cookie_mod/xir_cookie_styles.min.css");
+/* XirCookie Enhance Mod */]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/overall_footer.html">
+			<edit>
+				<comment lang="en"><![CDATA[Repeat this step for all style and add the follow line to all style footer you have activated. If you don't the board will not work!]]></comment>
+				<find><![CDATA[	<!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[	<!-- IF S_XIR_COOKIE_MOD --><br />{L_XIR_COOKIE_COPY}<!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+		<diy-instructions lang="en"><![CDATA[Copy all the file in proper loations.
+Follow the step for install. 
+Purge all the cache in forum / browser
+!!! DON'T REMOVE COPYRIGHT OR THE MOD DON'T WORK !!!!!!
+Add the footer part of copyright to footer of all styles installed on your phpbb forum or your board will not work!]]></diy-instructions>
+	</action-group>
+</mod>
