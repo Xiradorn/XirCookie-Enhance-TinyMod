@@ -4,7 +4,7 @@
 ----
 **Nome MOD:** XirCookie Enhance Mod  
 **Autore**: Sir Xiradorn  
-**Versione Mod**: 0.30.10 - Beta  
+**Versione Mod**: 1.0.0  
 **Data**: 04/07/2015  
 **Versioni phpBB compatibili**: 3.0.x  
 
@@ -91,6 +91,9 @@
 
 **Beta - Changelog v 0.30.10 / 1.0.0:**
  * 04/07/2015 - Passaggio in versione beta
+
+ **Versione 1.0.0:**
+ * 16/07/2015 - Rilascio versione Ufficiale 1.0.0
 
 
 \* La lingua dei file in questione non ha nulla a che vedere con quella del forum. Sul forum potete avere anche solo l'italiano e usare invece per la mod tutte le lingue elencate prima e/o crearne voi delle altre  

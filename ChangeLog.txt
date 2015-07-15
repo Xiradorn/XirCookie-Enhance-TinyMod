@@ -1,7 +1,7 @@
 ﻿[b]Nome MOD:[/b] XirCookie Enhance Mod
 [b]Autore[/b]: Sir Xiradorn
-[b]Versione Mod[/b]: 0.30.10 - Beta
-[b]Data[/b]: 04/07/2015
+[b]Versione Mod[/b]: 1.0.0 - Beta
+[b]Data[/b]: 16/07/2015
 [b]Versioni phpBB compatibili[/b]: 3.0.x
 
 [b]Descrizione MOD:[/b] Rendiamo il nostro forum a norma di legge creando un pre-portale di accoglienza per gli utenti con tutte le informazioni di cui hai bisogno. Il cookie sono a prova di dispositivo e non richiede JavaScript quindi anche sui browser più datati può essere visualizzato il tutto. Fornisce anche alcune funzioni aggiuntive e auto traduzione nelle lingue più disparate.
@@ -71,6 +71,10 @@
 
 [b]Beta - Changelog v 0.30.10 / 1.0.0:[/b]
 [list][*]04/07/2015 - Passaggio in versione beta
+[/list]
+
+[b]Versione 1.0.0:[/b]
+[list][*]16/07/2015 - Rilascio versione Ufficiale 1.0.0
 [/list]
 
 * La lingua dei file in questione non ha nulla a che vedere con quella del forum. Sul forum potete avere anche solo l'italiano e usare invece per la mod tutte le lingue elencate prima e/o crearne voi delle altre
