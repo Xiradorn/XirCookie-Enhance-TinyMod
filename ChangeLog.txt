@@ -6,9 +6,9 @@
 
 [b]Descrizione MOD:[/b] Rendiamo il nostro forum a norma di legge creando un pre-portale di accoglienza per gli utenti con tutte le informazioni di cui hai bisogno. Il cookie sono a prova di dispositivo e non richiede JavaScript quindi anche sui browser più datati può essere visualizzato il tutto. Fornisce anche alcune funzioni aggiuntive e auto traduzione nelle lingue più disparate.
 
-[b]Link Download Mod:[/b] [url=https://github.com/Xiradorn/XirCookie-Enhance-TinyMod-Phpbb/releases]XirCookie Enhance Mod - Last Release[/url]
+[b]Link Download Mod:[/b] [url=https://github.com/Xiradorn/XirCookie-Enhance-TinyMod-Phpbb/releases/tag/v1.0.0]XirCookie Enhance Mod - Last Release[/url]
 [b]Demo:[/b] [url=http://stargate.xiradorn.it/30x/]XirCookie Enhance Mod -> Stargate - XiLab[/url] 
-[b]Repository:[/b] [url=https://github.com/Xiradorn/XirCookie-Enhance-TinyMod-Phpbb]XirCookie Enhance Mod - Git[/url]
+[b]Repository:[/b] [url=https://github.com/Xiradorn/XirCookie-Enhance-TinyMod-Phpbb/releases]XirCookie Enhance Mod - Git[/url]
 
 [b]ALPHA - Changelog v 0.0.0 / 0.4.0:[/b]
 [list]
