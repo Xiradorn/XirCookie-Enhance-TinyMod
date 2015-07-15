@@ -5,7 +5,7 @@
 **Nome MOD:** XirCookie Enhance Mod  
 **Autore**: Sir Xiradorn  
 **Versione Mod**: 1.0.0  
-**Data**: 04/07/2015  
+**Data**: 16/07/2015  
 **Versioni phpBB compatibili**: 3.0.x  
 
 **Descrizione MOD:** Rendiamo il nostro forum a norma di legge creando un pre-portale di accoglienza per gli utenti con tutte le informazioni di cui hai bisogno. Il cookie sono a prova di dispositivo e non richiede JavaScript quindi anche sui browser più datati può essere visualizzato il tutto. Fornisce anche alcune funzioni aggiuntive e auto traduzione nelle lingue più disparate.
