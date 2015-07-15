@@ -92,7 +92,7 @@
 **Beta - Changelog v 0.30.10 / 1.0.0:**
  * 04/07/2015 - Passaggio in versione beta
 
- **Versione 1.0.0:**
+**Versione 1.0.0:**
  * 16/07/2015 - Rilascio versione Ufficiale 1.0.0
 
 
